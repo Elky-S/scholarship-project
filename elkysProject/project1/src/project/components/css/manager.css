@@ -1,0 +1,514 @@
+/* ============================================================
+   MANAGER.CSS - Consolidated & Cleaned Version
+   ============================================================ */
+
+/* --- 1. General Layout & Containers --- */
+.form-box,
+.form-boxB {
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-box {
+  background-color: #f9f9f9;
+}
+.form-boxB {
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #026666;
+}
+
+.form-box h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+.form-box h4 {
+  font-size: 1rem;
+  color: #555;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+/* --- 2. Animations --- */
+article {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- 3. Buttons --- */
+.btn {
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #05807f;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.toggle-btn {
+  background-color: #05807f;
+  width: 220px;
+  padding: 0.85rem 0;
+  font-size: 1rem;
+  margin: 1rem auto;
+  display: block;
+  color: white;
+}
+
+.toggle-btn:hover {
+  background-color: #026666;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn.allow,
+.btn.reject {
+  flex: 1;
+  min-width: 80px;
+  padding: 0.7rem 0;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.btn.allow {
+  background-color: #05807f;
+}
+.btn.allow:hover {
+  background-color: #026666;
+  transform: translateY(-2px);
+}
+
+.btn.reject {
+  background-color: #cc3333;
+}
+.btn.reject:hover {
+  background-color: #991f1f;
+  transform: translateY(-2px);
+}
+
+/* --- 4. Request Cards & Grids --- */
+.request-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.request-grid-single-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.grid-item {
+  background-color: #f1f9f9;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.request-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* --- 5. Detail Sections --- */
+.detail-section {
+  grid-column: 1 / -1;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.detail-section .grid-item {
+  background-color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+  color: #05807f;
+  border-bottom: 2px solid #05807f;
+  padding-bottom: 0.2rem;
+}
+
+/* --- 6. Tables --- */
+.brothers-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.brothers-table th,
+.brothers-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: right;
+}
+
+.brothers-table th {
+  background-color: #05807f;
+  color: white;
+}
+
+/* --- 7. Documents Section (Final Fix for Purple Links) --- */
+.document-card {
+  background: #fff;
+  border-right: 4px solid #05807f;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.doc-label {
+  font-weight: 600;
+  color: #333;
+  margin-left: 5px;
+}
+
+/* כאן אנחנו נועלים את הצבע הטורקיז ומונעים את הסגול */
+.document-link,
+.document-link:link,
+.document-link:visited,
+.document-link:active {
+  color: #05807f !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.document-link:hover {
+  color: #026666 !important;
+  text-decoration: underline !important;
+}
+
+.no-file {
+  color: #999;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+/* --- 8. SweetAlert Styles --- */
+.swal2-popup {
+  font-family: sans-serif;
+  border-radius: 12px;
+}
+.swal2-title {
+  color: #05807f;
+}
+.swal2-confirm {
+  background-color: #05807f !important;
+}
+.swal2-cancel {
+  background-color: #cc3333 !important;
+}
+
+/* --- 9. Media Queries --- */
+@media (max-width: 600px) {
+  .form-box {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .toggle-btn {
+    width: 180px;
+    font-size: 0.95rem;
+  }
+  .btn.allow,
+  .btn.reject {
+    min-width: 70px;
+    font-size: 0.85rem;
+  }
+  .request-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* עדכון המיכל של האייקון */
+.doc-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(5, 128, 127, 0.1); /* רקע טורקיז חלש מאוד */
+  padding: 8px;
+  border-radius: 8px;
+  min-width: 40px;
+  height: 40px;
+}
+
+/* לוודא שהכרטיס לא נמתח מדי */
+.document-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  border-right: 4px solid #05807f;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 12px;
+}
+
+/* הסרת האימוג'ים הישנים מה-content (אם היו) */
+.document-link::before {
+  content: none !important;
+}
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  align-items: flex-end;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.input-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fdfdfd;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+}
+/* כרטיס בסטטוס בהמתנה (ברירת מחדל) */
+.request-card.status-pending {
+  border-right: 5px solid #05798e; /* צהוב/כתום עדין */
+}
+
+/* כרטיס מאושר */
+.request-card.status-approved {
+  border-right: 5px solid #27ae60; /* ירוק */
+  background-color: rgba(39, 174, 96, 0.02); /* רקע ירוק בהיר מאוד כדי להבדיל */
+}
+
+/* כרטיס דחוי */
+.request-card.status-rejected {
+  border-right: 5px solid #e74c3c; /* אדום */
+  background-color: rgba(231, 76, 60, 0.02); /* רקע אדום בהיר מאוד */
+}
+
+/* אפשר גם לשנות את צבע הטקסט של הסטטוס ספציפית */
+.status-approved .grid-item strong + span,
+.status-approved .grid-item:contains("Status") {
+  color: #27ae60;
+  font-weight: bold;
+}
+/* ===== כפתורים - גרסה יציבה וממורכזת ===== */
+
+/* בסיס אחיד לכל הכפתורים - בלי הנפשות תזוזה */
+.btn {
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease; /* רק צבע ושקיפות */
+  text-align: center;
+  border: none;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: none !important; /* ביטול כל תזוזה */
+  animation: none !important; /* ביטול פולסים או אנימציות */
+}
+
+/* קבוצת כפתורי אישור/דחייה - תמיד במרכז */
+.button-group.full-width {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center; /* מרכז */
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* עיצוב כפתור אישור */
+.btn.allow {
+  background-color: #05807f;
+  color: white;
+  padding: 10px 30px;
+  min-width: 120px;
+}
+
+.btn.allow:hover {
+  background-color: #026666;
+  transform: none !important; /* וידוא שאין תזוזה */
+}
+
+/* עיצוב כפתור דחייה */
+.btn.reject {
+  background-color: #cc3333;
+  color: white;
+  padding: 10px 30px;
+  min-width: 120px;
+}
+
+.btn.reject:hover {
+  background-color: #991f1f;
+  transform: none !important;
+}
+
+/* כפתור ה-Toggle (צפה בפרטים) - ממורכז ויציב */
+.toggle-btn {
+  background-color: #05807f;
+  color: white;
+  width: 220px;
+  padding: 12px 0;
+  margin: 15px auto !important; /* מרכוז אוטומטי */
+  display: flex;
+}
+
+.toggle-btn:hover {
+  background-color: #026666;
+  transform: none !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* עיצוב כפתורי הסינון */
+.filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px; /* רווח מהשדות */
+}
+.status-notice {
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.approved-msg {
+  color: #27ae60;
+  background-color: rgba(39, 174, 96, 0.1);
+  border: 1px solid #27ae60;
+}
+
+.re-allow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.re-allow-container .status-notice {
+  color: #cc3333;
+}
+
+.btn-filter {
+  background-color: #05798e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  height: 42px; /* גובה זהה לשאר האינפוטים */
+}
+
+.btn-filter:hover {
+  background-color: #053030;
+  box-shadow: 0 4px 8px rgba(5, 128, 127, 0.2);
+}
+
+.btn-reset {
+  background-color: #f1f5f9; /* אפור בהיר עדין */
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  height: 42px;
+  width: 42px;
+}
+
+.btn-reset:hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+/* התאמה למובייל - שהכפתורים יהיו בשורה אחת מתחת לשדות */
+@media (max-width: 600px) {
+  .filter-actions {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

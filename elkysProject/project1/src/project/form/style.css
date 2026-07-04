@@ -1,0 +1,340 @@
+/* ===== עיצוב כללי לאתר ===== */
+body {
+  font-family: "Rubik", "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #fffcd8 100%);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* מעטפת עיקרית */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* ===== טפסים ===== */
+.form-box {
+  max-width: 180px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background: #ffffffcc;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.form-box label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+  color: #1e3a8a;
+  letter-spacing: 0.3px;
+}
+
+.form-box input {
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 16px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  margin-bottom: 18px;
+}
+
+.form-box input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+}
+
+/* ===== כפתורים ===== */
+.login-btn {
+  width: 50%;
+  padding: 1rem;
+  background: #1b90cf;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.login-btn:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== MultiForm ===== */
+.mainDiv {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffffcc;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stpDiv {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.step {
+  padding: 10px 14px;
+  border: 2px solid #3b82f6;
+  background: #eff6ff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.step.active-step {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.frmDiv {
+  margin-bottom: 25px;
+}
+
+.navButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===== קורס וסיסמה ===== */
+.input-style {
+  width: 66%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+select.input-style:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+}
+
+.password-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+}
+
+.password-input {
+  padding: 12px 16px;
+  padding-right: 40px; /* מקום לעין */
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== הודעות שגיאה ===== */
+/* .input-error {
+  outline: 2px solid red;
+  outline-offset: -2px;
+} */
+
+/* .error {
+  min-height: 14px; 
+  margin: 4px 0 10px;
+  font-size: 0.8rem;
+  color: red;
+  visibility: hidden;
+} */
+.error-input {
+  border: 5px solid red;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.general-error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* .error-input {
+    border: 1px solid red;
+}
+
+.error:not(:empty) {
+  visibility: visible;
+} */
+/*   עיצוב לSWAL */
+.swal2-popup {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+}
+
+.swal2-title {
+  color: #05807f;
+}
+
+.swal2-html-container {
+  color: #555;
+}
+
+.swal2-confirm {
+  background-color: #05807f !important;
+  color: white !important;
+}
+
+.swal2-cancel {
+  background-color: #cc3333 !important;
+  color: white !important;
+}
+/* style.css */
+
+.file-upload-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 12px 20px;
+  cursor: pointer;
+  background-color: #f0fafa; /* רקע בהיר מאוד */
+  border: 2px dashed #05807f; /* צבע הטורקיז שלך */
+  color: #05807f;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #05807f;
+  color: white;
+}
+
+/* מחביאים את ה-input המקורי והמכוער של הדפדפן */
+input[type="file"] {
+  display: none;
+}
+
+.file-name-info {
+  font-size: 0.85em;
+  color: #555;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.error-border {
+  border-color: #cc3333 !important;
+  background-color: #fff8f8;
+}
+/* ===== עיצוב תפריט הניווט (Nav) ===== */
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.7); /* שקיפות */
+  backdrop-filter: blur(10px);
+  border-radius: 50px; /* צורה מעוגלת של "נקניק" */
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: sticky;
+  top: 20px;
+  z-index: 1000;
+  max-width: fit-content;
+  margin: 20px auto;
+}
+
+.link {
+  text-decoration: none;
+  color: #074b7b;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* אפקט פס תחתון שצץ ב-Hover */
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #768fb7;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.link:hover::after {
+  width: 70%;
+}
+.name {
+  color: #074b7b;
+}
+.link:hover {
+  color: #3b82f6;
+  background: rgba(5, 128, 127, 0.05);
+}
+
+/* הלינק האקטיבי (הדף הנוכחי) */
+.active {
+  background: #3b82f6;
+  color: #fff !important;
+  box-shadow: 0 4px 10px rgba(5, 128, 127, 0.3);
+}
+.active.link:hover {
+  background-color: rgba(5, 128, 127, 0.3);
+}

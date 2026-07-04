@@ -1,0 +1,154 @@
+.div {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 5rem;
+  padding: 2rem;
+  /* margin-bottom: 3rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.link {
+  color: #1b90cf;
+  font-size: xx-large;
+  margin: 0 4rem;
+  text-decoration: none;
+}
+
+.active {
+  color: rgba(59, 130, 246, 0.4);
+  /* text-decoration: underline solid; */
+}
+
+.list {
+  float: right;
+  margin-right: 20rem;
+}
+
+.details {
+  float: left;
+  margin-left: 20rem;
+}
+.name {
+  font-size: x-large;
+  color: #3b82f6;
+  margin-top: 8px;
+}
+/* איקונים */
+.icon {
+  color: #4a90e2; /* צבע האייקון */
+  font-size: 24px; /* גובה האייקון */
+  transition: color 0.3s; /* אנימציה חלקה על שינוי צבע */
+}
+
+.icon:hover {
+  color: #333; /* שינוי צבע בעת ריחוף */
+}
+
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* שמירה על הקישורים בצד שמאל */
+  gap: 4.6rem; /* רווח קטן ומדויק בין הקישורים */
+  padding: 0.5rem 1rem;
+  background-color: #def0f9; /* צבע רקע פסטלי שמשתלב */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* מעט הצללה להדגשה */
+}
+
+.link {
+  text-decoration: none;
+  color: #05798e;
+  font-weight: 600; /* טקסט מודגש */
+  margin: 0; /* ביטול מרג'ין מיותר */
+  padding: 0.3rem 0.6rem; /* לחיצות נוחות */
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+/* .link:hover {
+  background-color: #00b4d8;
+  color: white;
+  border-radius: 5px;
+} */
+
+.name {
+  font-weight: 700; /* שם המשתמש מודגש */
+  color: #05798e;
+  margin-right: 1rem;
+}
+/* nav- end */
+/* login start */
+/* צבעי פסטל ורקע כללי */
+.login-page {
+  background: #f7fcfc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* קונטיינר מרכזי לטופס */
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  text-align: center;
+  animation: fadeIn 1s forwards;
+}
+
+/* כותרת הטופס */
+.login-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1b90cf;
+  font-weight: 700;
+}
+
+/* שדות קלט */
+.login-container input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid #d9f0ff;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+/* כפתור הלוגאאוט */
+/* גורם לכפתור להיראות ולהתנהג כמו קישור לכל דבר */
+.logout-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit; /* יורש את הגופן והגודל של ה-Nav */
+  cursor: pointer;
+  outline: inherit;
+  display: inline-block; /* שומר על היישור בשורה אחת */
+}
+
+/* מוודא שהצבע והריחוק יהיו זהים ל-NavLink */
+.link {
+  text-decoration: none;
+  color: #1b90cf;
+  font-weight: 600; /* טקסט מודגש */
+  margin: 0; /* ביטול מרג'ין מיותר */
+  padding: 0.3rem 0.6rem; /* לחיצות נוחות */
+  font-size: xx-large;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+/* .logout-btn:hover {
+  text-decoration: underline; /* או כל אפקט Hover שיש לך בקישורים 
+} */

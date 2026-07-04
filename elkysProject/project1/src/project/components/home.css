@@ -1,0 +1,384 @@
+/* צבעי פסטל ורקע כללי */
+.home-page {
+  background: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* קונטיינר מרכזי */
+.home-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Hero-card – גבוה ומרכזי, רוחב 90% */
+.hero-card {
+  width: 90%;
+  max-width: 90%;
+  padding: 6rem 2%;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  animation: fadeIn 1s forwards;
+}
+
+/* כפתור ראשי עם אנימציית Pulse */
+.main-btn {
+  background: rgb(255, 255, 255);
+  color: #1b90cf;
+  border: solid rgba(59, 130, 246, 0.4) 4px;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.main-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* System-card – רוחב 3/4 בלבד */
+.system-card {
+  width: 45%;
+  padding: 2rem 2%;
+  text-align: center;
+  background: rgba(130, 173, 244, 0.4);
+  border-left: 5px solid #d8f1fc;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.3s;
+}
+.system-icon {
+  font-size: 2rem;
+  /* color: #ffa94d; */
+  margin-bottom: 0.5rem;
+  animation: bell-ring 1s infinite;
+}
+
+@keyframes bell-ring {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+/* איקון כפתור */
+.hero-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-icon {
+  font-size: 2.5rem;
+  color: #00b4d8;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* שורת התמונות – רוחב 90% מהדף, 2 שורות של 3 */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem 2.5rem;
+  width: 70%; /* רוחב 90% מהדף */
+  margin: 0 auto; /* למרכז את השורה */
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.image-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-box {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  object-fit: cover;
+}
+
+/* שכבת הכיתוב */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-overlay span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* אפקט hover */
+.image-box:hover img {
+  transform: scale(1.1);
+}
+
+.image-box:hover .image-overlay {
+  opacity: 1;
+}
+
+/* info-section */
+.info-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.two-cols {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.info-box {
+  background: #f0faff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s forwards;
+}
+
+.info-box:nth-child(1) {
+  animation-delay: 0.7s;
+}
+.info-box:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.info-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1b90cf;
+}
+
+/* Wide-card – רוחב מלא */
+.wide-card {
+  background: #e6fffa;
+  padding: 1.5rem 2%;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 100%;
+  min-height: 320px; /* הופך אותו ליותר ארוך */
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+.wide-card .info-icon {
+  font-size: 2rem;
+  color: #1b90cf;
+  margin-bottom: 0.5rem;
+}
+
+/* פס כותרת */
+.strip-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: max-content;
+  margin: 1rem auto;
+  background: #def0f9;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.4s;
+}
+
+.strip-icon {
+  font-size: 1.5rem;
+}
+
+/* צבע אחיד לכל כרטיסי התוכן */
+.system-card,
+.strip-row {
+  background-color: #def0f9; /* צבע הרקע הכללי של העמוד */
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 2%;
+}
+
+/* אם רוצים להפריד עם גבול צבעוני דק */
+.system-card {
+  border-left: 5px solid #0096c7; /* אפשר לשנות או להוריד */
+}
+
+.strip-row {
+  border: 1px solid #d9f0ff; /* גבול עדין שמשתלב */
+  width: max-content;
+  padding: 0.5rem 1rem;
+}
+
+/* חדשות ועדכונים: */
+.news-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  animation: fadeText 1s ease-in-out;
+}
+
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-overlay span {
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+.main-btn {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.main-btn:hover {
+  transform: scale(1.08);
+}
+.news-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 2;
+  max-width: 900px;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+/* מעבר הנקודות */
+.news-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #b5eaea;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #0096c7;
+  transform: scale(1.4);
+}
+
+/* אנימציות Fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* רספונסיביות למובייל */
+@media (max-width: 768px) {
+  .cards-row {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%; /* להתאים למסך קטן יותר */
+  }
+  .info-grid.two-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+  .main-btn {
+    width: 100%;
+  }
+  .system-card {
+    width: 90%;
+  }
+}
