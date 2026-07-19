@@ -1,7 +1,11 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://scholarship-project-ag8g.onrender.com/api",
+  // בהתחברות לרשת:
+  // https://scholarship-project-ag8g.onrender.com/api
+  // בהתחברות ללוקאלי:
+  // http://localhost:5000/api
   withCredentials: true,
 });
 
