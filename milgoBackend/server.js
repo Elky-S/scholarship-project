@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 // הגדרת CORS - חשוב מאוד ש-credentials יהיה true כדי שהעוגיות/טוקנים יעברו
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://scholarship-r071.onrender.com"],
     credentials: true,
   }),
 );
